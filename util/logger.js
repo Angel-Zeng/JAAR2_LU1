@@ -1,4 +1,5 @@
 import winston from "winston";
+// let winston = require('winston')
 const { combine, timestamp, printf, colorize, align } = winston.format;
 
 export const logger = winston.createLogger({
@@ -13,3 +14,5 @@ export const logger = winston.createLogger({
     ),
     transports: [new winston.transports.Console()]
 });
+
+module.exports = logger;
