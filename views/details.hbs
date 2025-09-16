@@ -1,0 +1,12 @@
+<h1>{{film.title}}</h1>
+<p>{{film.description}}</p>
+<ul>
+  <li>Jaar: {{film.release_year}}</li>
+  <li>Taal: {{film.language}}</li>
+  <li>Speelduur: {{film.length}} min</li>
+  <li>Prijs (rental): {{film.rental_rate}}</li>
+  <li>Rating: {{film.rating}}</li>
+  {{#if film.categories}}<li>Categorieën: {{film.categories}}</li>{{/if}}
+  {{#if film.actors}}<li>Acteurs: {{film.actors}}</li>{{/if}}
+</ul>
+<p><a href="/films">← Terug</a></p>

@@ -1,2 +1,24 @@
 <h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
+
+<form method="get" action="/films">
+  <input type="text" name="q" placeholder="Zoek titel/beschrijving" value="{{filters.q}}">
+  <input type="number" name="year" placeholder="Jaar" value="{{filters.year}}">
+  <input type="text" name="genre" placeholder="Genre" value="{{filters.genre}}">
+  <input type="text" name="actor" placeholder="Acteur" value="{{filters.actor}}">
+  <button type="submit">Filter</button>
+  <a href="/films">Reset</a>
+</form>
+
+{{#if films.length}}
+  <ul>
+    {{#each films}}
+      <li>
+        <a href="/films/{{this.film_id}}">{{this.title}}</a>
+        ({{this.release_year}}) — {{this.categories}}
+        {{#if this.actors}}<br><small>Acteurs: {{this.actors}}</small>{{/if}}
+      </li>
+    {{/each}}
+  </ul>
+{{else}}
+  <p>Geen resultaten.</p>
+{{/if}}

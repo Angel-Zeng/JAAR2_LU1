@@ -1,5 +1,12 @@
 const express = require('express');
 const router = express.Router();
+const filmsController = require('../controllers/filmsController');
+
+router.get('/', filmsController.list);
+router.get('/:id', filmsController.details);
+
+module.exports = router;
+
 // const overviewController = require('../controllers/overview.controller');
 
 // const logger = require('../util/logger.js');
