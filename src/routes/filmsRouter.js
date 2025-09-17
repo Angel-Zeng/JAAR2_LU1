@@ -14,9 +14,9 @@ module.exports = router;
 
 
 // router routes defintion, where you put the function to be excecuted behind the comma (Like, "movieController.listMovies")
-router.get('/', filmsController.list);
-router.get('/:id', filmsController.details);
-router.get('/search', filmsController.search);
+// router.get('/', filmsController.list);
+// router.get('/:id', filmsController.details);
+// router.get('/search', filmsController.search);
 
 
 
