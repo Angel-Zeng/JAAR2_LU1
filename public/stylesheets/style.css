@@ -6,3 +6,36 @@ body {
 a {
   color: #00B7FF;
 }
+
+
+  .films-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+  .film-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    background: #fafafa;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: 180px;
+  }
+  .film-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  .film-info {
+    margin-bottom: 4px;
+    color: #555;
+  }
+  .film-price {
+    margin-top: auto;
+    font-weight: bold;
+    color: #1976d2;
+  }
